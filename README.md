@@ -12,7 +12,7 @@ Demander une permission à l'utilisateur est très simple:
          * Toutes les permissions doivent être déclarées dans le manifest avant d'appeler cette méthode.
          * Les demandes de permissions sont obligatoires pour les versions d'Android >= 6.
          *
-         * @param act instance d'une activité
+         * @param activity instance d'une activité
          * @param permissions tableau contenant les permissions à demander, chaque permission étant de la forme: 
          *                    Manifest.permission.NOM_DE_LA_PERMISSION
          * @param permissionListener écouteur d'évènement (callback) permettant de savoir si les permissions ont
