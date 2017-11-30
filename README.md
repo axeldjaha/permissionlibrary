@@ -21,12 +21,12 @@ Demander une permission à l'utilisateur est très simple:
         ADPermission.check(activity, permissions, new ADPermissionListener() {
             @Override
             public void onPermissionGranted() {
-                //permission acceptée, faire qqch
+                //permission acceptée, faire qqch ici
             }
 
             @Override
             public void onPermissionDenied() {
-                //permission refusée, faire qqch
+                //permission refusée, faire qqch ici
                 Toast.makeText(activity, "Acceptez les autorisations pour continuer", Toast.LENGTH_SHORT).show();
             }
         });
