@@ -17,7 +17,8 @@ Demander une permission à l'utilisateur est très simple:
          *                    Manifest.permission.NOM_DE_LA_PERMISSION
          * @param permissions tableau contenant les permissions à demander, chaque permission étant de la forme: 
          *                    Manifest.permission.NOM_DE_LA_PERMISSION.
-         *                    Exemple: String[] permissions = {Manifest.permission.SEND_SMS, Manifest.permission.READ_PHONE_STATE};                */
+         *                    Exemple: String[] permissions = {Manifest.permission.SEND_SMS, Manifest.permission.READ_PHONE_STATE};
+         */
         ADPermission.check(ExempleActivity.this, permissions, new ADPermissionListener() {
             @Override
             public void onPermissionGranted() {
