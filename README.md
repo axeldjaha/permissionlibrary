@@ -1,6 +1,6 @@
 # Avant propos
-Les Classes et interfaces de toute librairie 'axeldjaha' commencent toujours par AD, qui signifie Axel Djaha (l'auteur).
-# permissionlibrary
+Les Classes et interfaces de toute librairie 'axeldjaha' commencent toujours par AD (Axel Djaha).
+# Description
 Librairie pour gérer les permissions au cours de l'exécution d'une application. Plutôt utile pour les version d'android >= 6
 # Gradle
 compile 'axeldjaha.library:permission:1.0'
