@@ -3,7 +3,7 @@ Les Classes et interfaces de toute librairie 'axeldjaha' commencent toujours par
 # Description
 Librairie pour gérer les permissions au cours de l'exécution d'une application. Plutôt utile pour les version d'android >= 6
 # Gradle
-compile 'axeldjaha.library:permission:1.0'
+compile 'axeldjaha.library:permission:1.1'
 # Usage
 Demander une permission à l'utilisateur est très simple:
 
