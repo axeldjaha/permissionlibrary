@@ -8,25 +8,20 @@ compile 'axeldjaha.library:permission:1.0'
 Demander une permission à l'utilisateur est très simple:
 
         /**
-         * Demander des permissions utiles pour exécuter une action.
-         * Toutes les permissions doivent être déclarées dans le manifest avant d'appeler cette méthode.
-         * Les demandes de permissions sont obligatoires pour les versions d'Android >= 6.
-         *
-         * @param ExempleActivity.this instance d'une activité
-         * @param permissions tableau contenant les permissions à demander, chaque permission étant de la forme: 
-         *                    Manifest.permission.NOM_DE_LA_PERMISSION.
-         *                    Exemple: String[] permissions = {Manifest.permission.SEND_SMS, Manifest.permission.READ_PHONE_STATE};
-         */
-        ADPermission.check(ExempleActivity.this, permissions, new ADPermissionListener() {
-            @Override
-            public void onPermissionGranted() {
-                //permission acceptée, faire qqch ici
-            }
+         * On crée une instance de ADPermission,
+         * on définit les permissions à demander ainsi que l'écouteur d'évènement
+         * @param permissions tableau contenant les permissions à demander.
+         *                    Chaque permission étant de la forme: Manifest.permission.NOM_DE_LA_PERMISSION
+         *                    Exemple: String[] permissions = {Manifest.permission.SEND_SMS,...}         */
+        ADPermission.newInstance(ExempleActivity.this)
+                .setPermissions(permissions)
+                .setListener(new ADPermissionListener() {
+                    @Override
+                    public void onPermissionGranted() {
+                        //permission acceptée, faire qqch ici
+                    }
+                })
+                .check();
 
-            @Override
-            public void onPermissionDenied() {
-                //permission refusée, faire qqch ici
-                Toast.makeText(activity, "Acceptez les autorisations pour continuer", Toast.LENGTH_SHORT).show();
-            }
-        });
+
 
